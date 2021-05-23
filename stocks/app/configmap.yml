@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: stocks-config
+  namespace: apps
+data:
+  REDIS_HOST: "apps.redis.svc.cluster.local"
+  REDIS_PORT: "6379"
+  CACHE_EXPIRATION: "60000"
