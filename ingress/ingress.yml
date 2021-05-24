@@ -4,15 +4,17 @@ metadata:
   name: ingress
   namespace: apps
   annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
     kubernetes.io/ingress.class: public
 spec:
   rules:
     - http:
         paths:
-          - path: /stocks
+          - path: /stocks(/|$)(.*)
             pathType: Prefix
+#            Exact
             backend:
               service:
                 name: stocks
                 port:
-                  number: 8080
+                  number: 80

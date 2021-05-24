@@ -2,6 +2,10 @@ kind: Service
 apiVersion: v1
 metadata:
   name: stocks
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "8080"
+    prometheus.io/path: "/actuator/prometheus"
   namespace: apps
 spec:
   selector:
@@ -9,5 +13,5 @@ spec:
   type: ClusterIP
   ports:
     - protocol: TCP
-      port: 8080
+      port: 80
       targetPort: 8080
