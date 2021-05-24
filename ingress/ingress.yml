@@ -12,7 +12,6 @@ spec:
         paths:
           - path: /stocks(/|$)(.*)
             pathType: Prefix
-#            Exact
             backend:
               service:
                 name: stocks
