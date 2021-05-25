@@ -12,3 +12,4 @@ data:
   RETRY_MAX_DELAY: "3000"
   STOCKS_API_URI: "https://mfinance.com.br/api/v1/stocks"
   REDIS_TIMEOUT: "60000"
+  CACHE_TYPE: "NONE"
