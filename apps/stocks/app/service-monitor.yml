@@ -1,0 +1,15 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: stocks
+  namespace: apps
+  labels:
+    app: stocks
+spec:
+  selector:
+    matchLabels:
+      app: stocks
+  endpoints:
+    - port: http-8080
+      path: /actuator/prometheus
+      interval: 10s

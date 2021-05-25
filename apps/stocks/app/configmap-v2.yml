@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: stocks-config-v2
+  namespace: apps
+data:
+  APP_PORT: "8080"
+  REDIS_HOST: "redis.apps.svc.cluster.local"
+  REDIS_PORT: "6379"
+  CACHE_EXPIRATION: "60000"
+  RETRY_MAX_ATTEMPTS: "3"
+  RETRY_MAX_DELAY: "3000"
+  STOCKS_API_URI: "https://mfinance.com.br/api/v1/stocks"
+  REDIS_TIMEOUT: "60000"
+  CACHE_TYPE: "NONE"

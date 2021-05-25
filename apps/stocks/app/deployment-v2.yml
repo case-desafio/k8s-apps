@@ -1,19 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: stocks
+  name: stocks-v2
   namespace: apps
   labels:
     app: stocks
+    version: v2
 spec:
-  replicas: 1
+  replicas: 5
   selector:
     matchLabels:
       app: stocks
+      version: v2
   template:
     metadata:
       labels:
         app: stocks
+        version: v2
+      annotations:
+        sidecar.istio.io/inject: "true"
     spec:
       containers:
         - name: stocks
@@ -23,7 +28,7 @@ spec:
               name: http
           envFrom:
             - configMapRef:
-                name: stocks-config
+                name: stocks-config-v2
           livenessProbe:
             httpGet:
               path: /actuator/health
