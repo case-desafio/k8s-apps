@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: redis
+  name: stocks-redis
   namespace: apps
   labels:
-    app: redis
+    app: stocks-redis
 spec:
   selector:
     matchLabels:
-      app: redis
+      app: stocks-redis
   replicas: 1
   template:
     metadata:
       labels:
-        app: redis
+        app: stocks-redis
       annotations:
         sidecar.istio.io/inject: "true"
     spec:
