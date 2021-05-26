@@ -1,16 +1,15 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: stocks
+  name: wallet
   namespace: apps
   labels:
-    app: stocks
-    serviceMonitorSelector: prometheus
+    app: wallet
+    serviceMonitorSelector: prometheuss
 spec:
   selector:
     matchLabels:
-      app: stocks
-      team: app
+      app: wallet
   endpoints:
     - port: http-8080
       path: /actuator/prometheus

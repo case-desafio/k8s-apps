@@ -29,3 +29,12 @@ spec:
         - destination:
             host: stocks
             subset: v1
+    - name: "wallet-routes"
+      match:
+        - uri:
+            prefix: "/wallet"
+      rewrite:
+        uri: "/"
+      route:
+        - destination:
+            host: wallet

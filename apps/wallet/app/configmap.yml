@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: wallet-config
+  namespace: apps
+data:
+  APP_PORT: "8080"

@@ -12,6 +12,11 @@ resources:
   - stocks/redis/deployment.yml
   - stocks/redis/service.yml
   - stocks/traffic-splitting/destination-rule.yml
-  - stocks/traffic-splitting/virtual-service.yml
+  - wallet/app/configmap.yml
+  - wallet/app/deployment.yml
+  - wallet/app/autoscaling.yml
+  - wallet/app/service.yml
+  - wallet/app/service-monitor.yml
+  - virtual-service.yml
   - gateway.yml
 namespace: apps
