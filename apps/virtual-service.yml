@@ -7,7 +7,7 @@ spec:
   hosts:
     - "*"
   gateways:
-    - stock-gateway
+    - apps-gateway
   http:
     - name: "stocks-routes-v2"
       match:
