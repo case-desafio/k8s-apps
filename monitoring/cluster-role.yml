@@ -9,7 +9,6 @@ rules:
       - nodes
       - nodes/metrics
       - services
-      - servicemonitors
       - endpoints
       - pods
     verbs: ["get", "list", "watch"]

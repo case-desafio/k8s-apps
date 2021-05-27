@@ -5,12 +5,10 @@ metadata:
   namespace: apps
   labels:
     app: stocks
-    serviceMonitorSelector: prometheus
 spec:
   selector:
     matchLabels:
       app: stocks
-      team: app
   endpoints:
     - port: http-8080
       path: /actuator/prometheus

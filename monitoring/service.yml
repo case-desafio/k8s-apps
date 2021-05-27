@@ -3,11 +3,13 @@ kind: Service
 metadata:
   name: prometheus
   namespace: monitoring
+  labels:
+    app: prometheus
 spec:
   ports:
-    - name: http-8080
+    - name: http-9090
       port: 9090
       protocol: TCP
-      targetPort: 9090
+      targetPort: web
   selector:
-    prometheus: prometheus
+    app: prometheus
