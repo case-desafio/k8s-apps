@@ -9,4 +9,8 @@ curl -sL https://github.com/operator-framework/operator-lifecycle-manager/releas
 kubectl create -f https://operatorhub.io/install/grafana-operator.yml
 
 kustomize build . | kubectl apply -f -
+
+usuário e senha do grafana:
+user: admin
+pass: 123
 ```
