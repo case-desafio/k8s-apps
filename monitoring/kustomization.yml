@@ -6,4 +6,8 @@ resources:
   - cluster-role-binding.yml
   - service.yml
   - service-monitor.yml
+  - grafana/grafana-volume.yml
+  - grafana/grafana-datasource.yml
+  - grafana/grafana-secret.yml
+  - grafana/grafana.yml
 namespace: monitoring
