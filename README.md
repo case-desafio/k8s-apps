@@ -19,4 +19,11 @@ metallb              # Loadbalancer for your Kubernetes cluster
 storage              # Storage class; allocates storage from host directory  
 </pre>
 
+Utilizado https://kustomize.io/ para criação dos templates de arquivos .yml  
+Instalação necessária para utilização:
+<pre>
+curl -s "https://raw.githubusercontent.com/\
+kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
+</pre>
+
 
