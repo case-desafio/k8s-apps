@@ -8,7 +8,7 @@ de usuários e registros de compra ou venda de ações, conforme código e usuá
 
 Executar os comandos conforme orientações nos arquivos README de cada seção.
 
-Manifestos executados em ambiente local utilizando kubernetes https://microk8s.io/:
+Manifestos executados em ambiente local utilizando kubernetes https://microk8s.io/
 
 ## MicroK8s Add ons configurados:
 <pre>
