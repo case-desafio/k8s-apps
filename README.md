@@ -7,3 +7,16 @@ As informações ficam armazenadas por um determinado período, o qual pode ser 
 de usuários e registros de compra ou venda de ações, conforme código e usuário informado, calculando o custo médio das ações.  
 
 Executar os comandos conforme orientações nos arquivos README de cada seção.
+
+Manifestos executados em ambiente local utilizando kubernetes https://microk8s.io/:
+
+## MicroK8s Add ons configurados:
+<pre>
+dns                  # CoreDNS  
+ha-cluster           # Configure high availability on the current node  
+istio                # Core Istio service mesh services  
+metallb              # Loadbalancer for your Kubernetes cluster  
+storage              # Storage class; allocates storage from host directory  
+</pre>
+
+
